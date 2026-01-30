@@ -1,0 +1,432 @@
+/* ================= RESET ================= */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: black;
+  overflow-x: hidden;
+}
+
+/* ================= CONTAINER ================= */
+.container{
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+}
+
+/* ================= NAVBAR ================= */
+.navlist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  box-shadow: 1px 1px 5px rgba(255,0,0,0.8);
+}
+
+.navlist li{
+  list-style: none;
+}
+
+.navlist li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: white;
+  position: relative;
+}
+
+.navlist li a:hover{
+  color: red;
+}
+
+.navlist li a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: red;
+  transform: scaleX(0);
+  transition: 0.4s;
+}
+
+.navlist li a:hover::after{
+  transform: scaleX(1);
+}
+
+/* ================= HERO SECTION ================= */
+.left-container,
+.right-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.left-container{
+  width: 70%;
+  background: black;
+  padding-left: 50px;
+}
+
+.right-container{
+  width: 30%;
+  background: linear-gradient(-40deg, red, black 70%);
+}
+
+/* ================= SOCIAL ICONS ================= */
+.icon{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.icon a{
+  text-decoration: none;
+}
+
+.icon .fb{
+  font-size: 45px;
+  color: #aaa;
+  transition: 0.4s;
+}
+
+.icon .fb:hover{
+  color: red;
+  transform: scale(1.1);
+}
+
+/* ================= CONTENT ================= */
+.content{
+  margin-left: 60px;
+}
+
+.content .intro{
+  font-size: 20px;
+  color: white;
+}
+
+.content .intro span{
+  color: red;
+}
+
+.content h1{
+  font-size: 50px;
+  color: red;
+}
+
+.content .detail{
+  font-size: 18px;
+  color: #ddd;
+  max-width: 800px;
+}
+
+/* ================= BUTTONS ================= */
+.btn{
+  margin-top: 20px;
+}
+
+.btn button{
+  padding: 10px 25px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid red;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn button:nth-child(1){
+  background: red;
+  color: black;
+}
+
+.btn button:nth-child(2){
+  background: transparent;
+  color: red;
+  margin-left: 20px;
+}
+
+.btn button:hover{
+  background: black;
+  color: red;
+}
+
+.btn button:nth-child(2):hover{
+  background: red;
+  color: black;
+}
+
+/* ================= IMAGE CIRCLE ================= */
+.design .circle{
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1){
+  width: 30rem;
+  background: linear-gradient(90deg, transparent 50%, black 50%);
+}
+
+.circle:nth-child(2){
+  width: 25rem;
+  background-image: url("./images/adi\ image.jpg");
+  background-size: cover;
+  border: 10px solid white;
+  box-shadow: 0 0 1px white, inset 0 0 1px white, 0 0 1px #002558, inset 0 0 1px #0051ff,
+    0 0 30px #4680fd, inset 0 01 30px #0051ff;
+}
+
+/* ================= ABOUT SECTION ================= */
+.next{
+  min-height: 100vh;
+  display: flex;
+}
+
+.left{
+  width: 70%;
+  background: black;
+  padding: 120px 60px;
+}
+
+.right{
+  width: 30%;
+  background: linear-gradient(-40deg, red, black 70%);
+  padding: 120px 40px;
+}
+
+.ab{
+  color: red;
+  font-size: 40px;
+}
+
+.ed, .sc{
+  color: white;
+}
+
+.tenth, .twelth{
+  color: #ff6b6b;
+}
+
+/* ================= PROJECT SECTION ================= */
+.project{
+  min-height: 100vh;
+}
+
+.lc{
+  background: black;
+  padding: 120px 60px;
+}
+
+.pj{
+  color: red;
+  font-size: 40px;
+}
+
+.project-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.project-card{
+  background: #000000;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-card h3{
+  color: red;
+}
+
+.project-card p{
+  color: #ddd;
+}
+
+.project-card:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 0 15px red;
+}
+
+.project-links a{
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.project-links a:first-child{
+  background: red;
+  color: black;
+}
+
+.project-links a:last-child{
+  background: #333;
+  color: white;
+}
+
+/* ================= SERVICES ================= */
+.services{
+  min-height: 100vh;
+  display: flex;
+}
+
+.l{
+  width: 70%;
+  background: black;
+  padding: 120px 60px;
+}
+
+.r{
+  width: 30%;
+  background: linear-gradient(-40deg, red, black 70%);
+  padding-top: 120px;
+}
+
+.ser{
+  color: red;
+  font-size: 40px;
+}
+
+.service-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 40px;
+}
+
+.service-card{
+  background: #000000;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  transition: 0.3s;
+}
+
+.service-card span{
+  font-size: 40px;
+}
+
+.service-card:hover{
+  transform: translateY(-25px);
+  box-shadow: 0 0 15px rgb(226, 0, 0);
+}
+
+/* ================= CONTACT ================= */
+.ct{
+  color: red;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+.em{
+  color: white;
+  margin-left: 50px;
+}
+
+.form input,
+.form textarea{
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 50px;
+}
+
+.form button{
+  width: 50%;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+.form button:hover{
+  color: red;
+}
+
+.last{
+  color: white;
+  margin-left: 50px;
+}
+
+/* ================= FOOTER ================= */
+.reserve{
+  height: 100px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve p{
+  color: white;
+  font-size: 18px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px){
+
+  .container,
+  .next,
+  .services{
+    flex-direction: column;
+  }
+
+  .left-container,
+  .right-container,
+  .left,
+  .right,
+  .l,
+  .r{
+    width: 100%;
+    padding: 80px 20px;
+  }
+
+  .content{
+    margin-left: 0;
+  }
+
+  .content h1{
+    font-size: 32px;
+  }
+
+  .navlist{
+    gap: 20px;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .navlist li a{
+    font-size: 14px;
+  }
+
+  .design{
+    display: none;
+  }
+}
