@@ -187,9 +187,8 @@ body{
   width: 25rem;
   background-image: url("./images/adi\ image.jpg");
   background-size: cover;
-  border: 10px solid white;
-  box-shadow: 0 0 1px white, inset 0 0 1px white, 0 0 1px #002558, inset 0 0 1px #0051ff,
-    0 0 30px #4680fd, inset 0 01 30px #0051ff;
+  background-repeat: no-repeat;
+  border: 5px solid white;
 }
 
 /* ================= ABOUT SECTION ================= */
@@ -202,6 +201,7 @@ body{
   width: 70%;
   background: black;
   padding: 120px 60px;
+  
 }
 
 .right{
@@ -222,10 +222,13 @@ body{
 .tenth, .twelth{
   color: #ff6b6b;
 }
+.prg{
+  color: red;
+}
 
 /* ================= PROJECT SECTION ================= */
 .project{
-  min-height: 100vh;
+  height: 50vh;
 }
 
 .lc{
@@ -251,6 +254,7 @@ body{
   padding: 20px;
   border-radius: 15px;
   transition: 0.3s;
+  border: solid,red,1px;
 }
 
 .project-card img{
@@ -267,26 +271,23 @@ body{
 }
 
 .project-card:hover{
+  
+  background-color: red;
   transform: translateY(-20px);
-  box-shadow: 0 0 15px red;
+  box-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
 .project-links a{
+  background-color: red;
+  color: white;
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 5px;
   font-size: 14px;
+  margin-top: 12px;
+  display: inline-block;
 }
 
-.project-links a:first-child{
-  background: red;
-  color: black;
-}
-
-.project-links a:last-child{
-  background: #333;
-  color: white;
-}
 
 /* ================= SERVICES ================= */
 .services{
@@ -323,6 +324,7 @@ body{
   border-radius: 15px;
   color: white;
   transition: 0.3s;
+  border: solid,red,1px;
 }
 
 .service-card span{
@@ -331,7 +333,8 @@ body{
 
 .service-card:hover{
   transform: translateY(-25px);
-  box-shadow: 0 0 15px rgb(226, 0, 0);
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+  background-color: red;
 }
 
 /* ================= CONTACT ================= */
@@ -430,3 +433,4 @@ body{
     display: none;
   }
 }
+
